@@ -34,7 +34,7 @@ The full NASBench-201 dataset can be found at [here](https://drive.google.com/fi
 - <a href="./search_algos/BOHB">**BOHB**</a>: Robust and Efficient Hyperparameter Optimization at Scale
 - <a href="./search_algos/TPE">**TPE**</a>: Algorithms for Hyper-Parameter Optimization
 
-For one(few)-shot vanilla NAS algorithms, the search is guided by the individual architecture performance, which is estimated by the supernet. Therefore, we provide the accuracies of all 15625 architectures in NasBench201, which are estimated by both one-shot supernet and few-shot supernets. These files are located on ./supernet_info. ./supernet_info also contains a file named 'nasbench201', which contains the real accuracies of architectures in NasBench201.
+For one(few)-shot vanilla NAS algorithms, the search is guided by the individual architecture performance, which is estimated by the supernet. Therefore, we provide the estimated accuracies of all 15625 architectures in NasBench201, which are approximated by both one-shot supernet and few-shot supernets. These files are located on ./supernet_info. Folder './supernet_info' also contains a file named 'nasbench201', which contains the real accuracies of architectures in NasBench201.
 
 If you would like to train and evaluate the supernet(s) by yourself, please follow the instruction <a href="./supernet">**here**</a>.
 
