@@ -22,7 +22,7 @@ Please go to the root path of FEW-SHOT_NASBENCH201 to run these scripts.
 
   bash ./search_algos/DARTS/few-shot/DARTS-V2_4.sh cifar10 0 -1 0 NASBENCH201_PATH
   ```
-  Alternatively, you can simply run at once
+  Alternatively, you can simply run the script below at once
   ```
   bash ./search_algos/DARTS/few-shot/DARTS-V2_BATCH.sh cifar10 0 -1 0 NASBENCH201_PATH
   ```
