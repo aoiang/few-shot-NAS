@@ -1,7 +1,7 @@
 # Few-shot Neural Architecture Search
 
-<p>
-<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/terser.png?raw=true' width="1000">
+<p align="center">
+<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/terser.png?raw=true' width="800">
 </p>
 
 
