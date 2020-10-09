@@ -1,8 +1,20 @@
-# Few-shot NAS 
+# Few-shot Neural Architecture Search
 
 <p>
 <img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/terser.png?raw=true' width="1000">
 </p>
+
+
+```
+@misc{zhao2020fewshot,
+      title={Few-shot Neural Architecture Search}, 
+      author={Yiyang Zhao and Linnan Wang and Yuandong Tian and Rodrigo Fonseca and Tian Guo},
+      year={2020},
+      eprint={2006.06863},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 ## Introduction
 
@@ -18,16 +30,7 @@ Please refer <a href="./Few-Shot_cifar10">**here**</a> to test our state-of-the-
 
 
 
-```
-@misc{zhao2020fewshot,
-      title={Few-shot Neural Architecture Search}, 
-      author={Yiyang Zhao and Linnan Wang and Yuandong Tian and Rodrigo Fonseca and Tian Guo},
-      year={2020},
-      eprint={2006.06863},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
+
 
 
 
