@@ -25,7 +25,7 @@ One-shot Neural Architecture Search uses a single supernet to approximate the pe
 Please refer <a href="./Few-Shot_NasBench201">**here**</a> to see how to use few-shot NAS improve the search performance on NasBench201.
 
 ## Few-shot NAS on Cifar10
-Please refer <a href="./Few-Shot_cifar10">**here**</a> to test our state-of-the-art models searched by few-shot NAS.
+Please refer <a href="./Few-Shot-NAS_cifar10">**here**</a> to test our state-of-the-art models searched by few-shot NAS.
 
 
 
