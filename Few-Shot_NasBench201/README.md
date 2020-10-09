@@ -10,7 +10,7 @@
 
 ## How to Use Few-shot NAS to Reproduce above Results
 
-### Environment Requiirements
+### Environment Requirements
 ```
 python >= 3.6, numpy >= 1.9.1, torch >= 1.5.0, hpbandster, json
 ```
