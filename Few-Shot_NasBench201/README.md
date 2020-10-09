@@ -3,8 +3,8 @@
 ## Few-shot NAS Greatly Improves Different NAS Algorithms on NASBench-201
 
 <p>
-<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/grad_algos.png?raw=true' width="800">
-<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/search_algos.png?raw=true' width="800">
+<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/grad_algos.png?raw=true' width="860">
+<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/search_algos.png?raw=true' width="860">
 </p>
 
 
