@@ -1,9 +1,9 @@
 #!/bin/bash
 echo script name: $0
 echo $# arguments
-if [ "$#" -ne 5 ] ;then
+if [ "$#" -ne 4 ] ;then
   echo "Input illegal number of parameters " $#
-  echo "Need 5 parameters for dataset, BN-tracking-status, and path of benchmark_file, output folder, and operation index"
+  echo "Need 5 parameters for dataset, BN-tracking-status, and path of benchmark_file, and output folder"
   exit 1
 fi
 
@@ -11,7 +11,7 @@ dataset=$1
 BN=$2
 TORCH_HOME=$3
 OUTPUT=$4
-OP=$5
+
 
 if [ "$TORCH_HOME" = "" ]; then
   echo "Must set TORCH_HOME envoriment variable for data dir saving"

@@ -1,7 +1,7 @@
 #!/bin/bash
 echo script name: $0
 echo $# arguments
-if [ "$#" -ne 6 ] ;then
+if [ "$#" -ne 5 ] ;then
   echo "Input illegal number of parameters " $#
   echo "Need 5 parameters for dataset, BN-tracking-status, path of benchmark_file, one-shot supernet model checkpoint, and operation index"
   exit 1

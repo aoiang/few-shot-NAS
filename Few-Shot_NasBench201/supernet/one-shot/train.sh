@@ -1,7 +1,7 @@
 #!/bin/bash
 echo script name: $0
 echo $# arguments
-if [ "$#" -ne 4 ] ;then
+if [ "$#" -ne 3 ] ;then
   echo "Input illegal number of parameters " $#
   echo "Need 3 parameters for dataset, BN-tracking-status, and path of benchmark_file"
   exit 1

@@ -1,18 +1,19 @@
 #!/bin/bash
+# Efficient Neural Architecture Search via Parameter Sharing, ICML 2018
+# bash ./scripts-search/algos/ENAS/ENAS_3.sh cifar10 0 -1 0 BENCHMARK_PATH
+
 echo script name: $0
 echo $# arguments
-if [ "$#" -ne 4 ] ;then
+if [ "$#" -ne 5 ] ;then
   echo "Input illegal number of parameters " $#
-  echo "Need 5 parameters for dataset, BN-tracking-status, and path of benchmark_file, and output folder"
+  echo "Need 5 parameters for dataset, tracking_status, seed, ith run, and path of benchmark_file"
   exit 1
 fi
-
 dataset=$1
 BN=$2
-TORCH_HOME=$3
-OUTPUT=$4
-
-
+seed=$3
+run=$4
+TORCH_HOME=$5
 if [ "$TORCH_HOME" = "" ]; then
   echo "Must set TORCH_HOME envoriment variable for data dir saving"
   exit 1
@@ -31,28 +32,26 @@ if [ "$dataset" == "cifar10" ] || [ "$dataset" == "cifar100" ]; then
 else
   data_path="$TORCH_HOME/cifar.python/ImageNet16"
 fi
-
-
+#benchmark_file=${TORCH_HOME}/NAS-Bench-201-v1_0-e61699.pth
 benchmark_file=${TORCH_HOME}/NAS-Bench-201-v1_1-096897.pth
 
-save_dir=./supernet_checkpoint/one-shot
+save_dir=./output/few-shot-NAS/ENAS-${dataset}-BN${BN}/runs-${run}
 
 
 for (( c=0; c<=4; c++ ))
 do
-    OMP_NUM_THREADS=4 python ./exps/supernet/one-shot-supernet_eval.py \
+    OMP_NUM_THREADS=4 python ./exps/algos/ENAS-few-shot.py \
         --save_dir ${save_dir} --max_nodes ${max_nodes} --channel ${channel} --num_cells ${num_cells} \
         --dataset ${dataset} --data_path ${data_path} \
         --search_space_name ${space} \
         --arch_nas_dataset ${benchmark_file} \
-        --config_path configs/nas-benchmark/algos/FEW-SHOT-SUPERNET.config \
         --track_running_stats ${BN} \
-        --select_num 100 \
-        --output_dir ${OUTPUT} \
-        --workers 4 --print_freq 200 --rand_seed 0 --edge_op ${c}
+        --config_path ./configs/nas-benchmark/algos/ENAS.config \
+        --controller_entropy_weight 0.0001 \
+        --controller_bl_dec 0.99 \
+        --controller_train_steps 50 \
+        --controller_num_aggregate 20 \
+        --controller_num_samples 100 \
+        --workers 4 --print_freq 200 --rand_seed ${seed} \
+        --edge_to_split 0 --edge_op ${c}
 done
-
-
-
-
-
