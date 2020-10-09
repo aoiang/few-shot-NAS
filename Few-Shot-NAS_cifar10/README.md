@@ -1,33 +1,29 @@
-# Few-shot Neural Architecture Search
+# Few-shot NAS on CIFAR10
 
-<p>
-<img src='https://github.com/aoiang/paper-images/blob/master/few-shot-nas/terser.png?raw=true' width="1000">
-</p>
-
-
+## Environment Requirements
 ```
-@misc{zhao2020fewshot,
-      title={Few-shot Neural Architecture Search}, 
-      author={Yiyang Zhao and Linnan Wang and Yuandong Tian and Rodrigo Fonseca and Tian Guo},
-      year={2020},
-      eprint={2006.06863},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
+python >= 3.6, numpy >= 1.9.1, torch >= 1.5.0 
 ```
 
-## Introduction
+## Download models
+Download the large pre-trained model(45.5M) checkpoint from <a href=https://drive.google.com/drive/u/0/folders/1KVGozie7jiqMp9kbaFIzQwb-sMGZqb2r>here</a>, and place it on folder large. 
 
-One-shot Neural Architecture Search uses a single supernet to approximate the performance each architecture. However, this performance estimation is super inaccurate because of co-adaption among operations in supernet. Few-shot NAS uses multiple supernets with less edges(operations) and each of them covers different regions of the search space to alleviate the undesired co-adaption. Compared to one-shot NAS, few-shot NAS greatly improve the performance of architecture evaluation with a small increase of overhead. Please click [here][1] to see our paper.
-
-
-## Few-shot NAS on NasBench201
-Please refer <a href="./Few-Shot_NasBench201">**here**</a> to see how to use few-shot NAS improve the search performance on NasBench201.
-
-## Few-shot NAS on Cifar10
-Please refer <a href="./Few-Shot_cifar10">**here**</a> to test our state-of-the-art models searched by few-shot NAS.
+Download the small pre-trained model(3.79M) checkpoint from <a href=https://drive.google.com/drive/u/0/folders/1kIl7bol9GoA-oeNywCjGgDSQ9AkOo19s>here</a>, and place it on folder small. 
 
 
+## Test Models
+
+- For small model
+```
+python test.py –arch small
+```
+
+- For large model
+```
+python test.py –arch large
+```
+
+The top 1 accuracy of small model is 98.29%. The top 1 accuracy of large model is 98.72%.  
 
 
 
@@ -37,7 +33,19 @@ Please refer <a href="./Few-Shot_cifar10">**here**</a> to test our state-of-the-
 
 
 
-[1]: https://arxiv.org/abs/2006.06863
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
