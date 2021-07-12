@@ -45,7 +45,7 @@ do
         --dataset ${dataset} --data_path ${data_path} \
         --search_space_name ${space} \
         --arch_nas_dataset ${benchmark_file} \
-        --config_path configs/nas-benchmark/algos/FEW-SHOT-SUPERNET.config \
+        --config_path configs/nas-benchmark/algos/ONE-SHOT-SUPERNET.config \
         --track_running_stats ${BN} \
         --select_num 100 \
         --output_dir ${OUTPUT} \
